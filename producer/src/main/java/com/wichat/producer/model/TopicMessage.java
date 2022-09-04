@@ -6,6 +6,11 @@ import lombok.Setter;
 @Getter
 @Setter
 public class TopicMessage {
-    private String topic;
-    private String message;
+
+    private Long roomId;
+
+    private String sender;
+
+    private String content;
+
 }
