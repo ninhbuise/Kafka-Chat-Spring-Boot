@@ -1,6 +1,6 @@
 # WiChat-server: Chat server
 
-WiChat is a pet project aim to practice building a typical microservice application in Java
+WiChat is a pet project aim to practice building a Apache Kafka Topic Message Java application
 
 ## Tentative technologies and frameworks
 
@@ -18,7 +18,7 @@ WiChat is a pet project aim to practice building a typical microservice applicat
 - Docker runtime (single binary builds will be provided in the future)
 
 ### Installing
-
+#### Redpanda Console Quick Start
 We offer pre built docker images for RP Console, a Helm chart and a Terraform module to make the installation as comfortable as possible for you. Please take a look at our dedicated [Installation documentation](https://docs.redpanda.com/docs/console/installation/).
 
 ### Quick Start
