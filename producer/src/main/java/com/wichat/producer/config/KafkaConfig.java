@@ -58,6 +58,10 @@ public class KafkaConfig {
 		configMap.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, JsonDeserializer.class);
 		configMap.put(ConsumerConfig.GROUP_ID_CONFIG, KafkaConstants.GROUP_ID_JSON);
         configMap.put(JsonDeserializer.TRUSTED_PACKAGES, "com.wichat.producer.model.TopicMessage");
+		configMap.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "earliest");
+		configMap.put(ConsumerConfig.AUTO_COMMIT_INTERVAL_MS_CONFIG, "1000");
+		configMap.put(ConsumerConfig.ENABLE_AUTO_COMMIT_CONFIG, "true");
+		configMap.put("enable.partition.eof", "false");
 		return new DefaultKafkaConsumerFactory<>(configMap);
 	}
 

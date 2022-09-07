@@ -57,6 +57,17 @@ services:
     depends_on:
       - redpanda
 
+  schema-registry:
+    image: confluentinc/cp-schema-registry:6.1.0
+    hostname: schema-registry
+    depends_on:
+      - redpanda
+    ports:
+      - 8084:8084
+    environment:
+      SCHEMA_REGISTRY_HOST_NAME: schema-registry
+      SCHEMA_REGISTRY_KAFKASTORE_BOOTSTRAP_SERVERS: redpanda:29092
+
   connect:
     image: docker.cloudsmith.io/redpanda/connectors/connectors:624ff9e
     hostname: connect

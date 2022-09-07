@@ -13,7 +13,7 @@ import com.wichat.producer.constants.KafkaConstants;
 import com.wichat.producer.model.TopicMessage;
 
 @RestController
-@RequestMapping("api/v1")
+@RequestMapping("api/v1/producer")
 public class ProducerController {
 
     @Autowired

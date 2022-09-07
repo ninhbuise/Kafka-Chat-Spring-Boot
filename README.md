@@ -25,3 +25,9 @@ We offer pre built docker images for RP Console, a Helm chart and a Terraform mo
 1. Get the latest source code
 1. Have your Docker desktop with Kubernetes enabled
 1. Run `docker-compose up -d`
+1. Run Spring Boot Application [OpenAPI](http://localhost:8088/swagger-ui/index.html). Produce messages to the topic, topic will be automatically created. 
+1. Consume (read) the messages in the topic: `docker exec -it redpanda_redpanda_1 rpk topic consume wichat --brokers=localhost:9092` or view at [Redpanda Console](http://localhost:8080/topics/wichat)
+1. Run SendMessage.py script for random message (optional)
+    - Python 3.6 , 3.7, 3.8
+    - python -m pip install requests
+    - pip install Faker - optional : this Lib to ramdomly create dummy data
